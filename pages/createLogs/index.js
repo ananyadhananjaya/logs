@@ -1,5 +1,9 @@
+import createLog from "../../firebase/createLog";
+
 export default function CreateLogs(){
     return(
-        <div>This is create logs page</div>
+        <>
+        <button onClick = {()=> createLog()}>add log</button>
+            </>
     )
 }
