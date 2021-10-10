@@ -1,5 +1,9 @@
+import getLog from "../../firebase/getLog";
+
 export default function Logs(){
     return(
-        <div>this is logs page</div>
+        <>
+         <button onClick = {()=> getLog()}>get data</button> 
+         </>
     )
 }
