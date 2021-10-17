@@ -4,8 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: theme =>( {
-        'landing-page': "url('/assets/background.jpg')"
+      backgroundImage: theme =>({
+        'landing-page': "url('/eugene-golovesov-Im2YhZG-ccQ-unsplash.jpg)",
+
       })
     },
   },

@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="h-screen flex flex-wrap content-center bg-landing-page justify-center">
+      <div className="h-screen flex flex-wrap content-center justify-center">
         <div className="">
-          <div className="m-3 text-center font-sans text-6xl font-bold tracking-wide space-y-2">
+          <div className="m-3 text-center font-sans font-bold tracking-wide space-y-2 text-2xl md:text-3xl lg:text-5xl">
             <p className="text-yellow-600">Hi. My name is AX. </p>
             <p className="text-yellow-500">You can find my logs, rather personal opinions.</p>
             <p className="text-yellow-500">Feel free to add on.</p>

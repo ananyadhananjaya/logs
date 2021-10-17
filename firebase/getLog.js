@@ -1,13 +1,20 @@
-import { doc, getDoc } from "firebase/firestore";
+import { async } from "@firebase/util";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
 
 export default async function getLog(){
-    const docRef = doc(db, "logs", "The sun");
-    const docSnap = await getDoc(docRef);
+    const querySnapshot = await getDocs(collection(db, "logs"));
+    return querySnapshot;
+}
 
-    if(docSnap.exists()){
-        console.log("data", docSnap.data());
-    } else{
-        console.log("no data")
+export async function getStaticProps(){
+    const res = await getDocs(collection(db, "logs"));
+    const ans = await res
+
+    return {
+        props :{
+            logs: ans
+        }
     }
+
 }
