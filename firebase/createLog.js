@@ -1,8 +1,8 @@
 import { db } from "./firebase";
-import { doc, setDoc } from "firebase/firestore"; 
+import { addDoc, collection } from "firebase/firestore"; 
 
-export default async function createLog(title, log){
-    await setDoc(doc(db, "logs", title), {
+export default async function createLog(log){
+    await addDoc(collection(db, "logs"), {
         log: log
     })
     .then((data)=>{})

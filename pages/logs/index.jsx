@@ -9,11 +9,11 @@ export default function Logs({ data }) {
   Object.values(data).forEach((doc) => console.log(doc.log));
   return (
     <>
-      <div class="">
-      <div class="flex flex-wrap justify-center">
+      <div className="">
+      <div className="flex flex-wrap justify-center">
       {Object.values(data).map((doc) => (
-        <div class="max-w-sm rounded overflow-hidden shadow-lg m-2 w-2/3">
-          <div class="px-6 py-4">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-2 w-2/3">
+          <div className="px-6 py-4">
             <p>{doc.log}</p>
           </div>
         </div>
