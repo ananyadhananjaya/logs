@@ -10,7 +10,6 @@ export default async function getLog(){
 export async function getStaticProps(){
     const res = await getDocs(collection(db, "logs"));
     const ans = await res
-
     return {
         props :{
             logs: ans
