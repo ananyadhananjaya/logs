@@ -1,2 +1,2 @@
 # logs
-An app to log. Built using nexJS
+An app to log. Built using nextJS
