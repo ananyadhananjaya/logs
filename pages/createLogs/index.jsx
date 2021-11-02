@@ -1,6 +1,7 @@
 import { useState } from "react";
 import createLog from "../../firebase/createLog";
 import { useRouter } from "next/dist/client/router";
+import Layout from "../../components/layout";
 
 export default function CreateLogs() {
   const [data, setData] = useState("");
@@ -28,7 +29,7 @@ export default function CreateLogs() {
           className="w-2/3 m-2 p-2 bg-gray-100 block border border-gray-400 focus:outline-none focus:border-gray-500 rounded focus:bg-white"
           placeholder="log here"
           onChange={(event) => handleChange(event.target.value)}
-     
+          autoComplete="off"
         ></input>{" "}
       </div>
       <div className="flex justify-center">
@@ -42,3 +43,7 @@ export default function CreateLogs() {
     </>
   );
 }
+
+CreateLogs.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
