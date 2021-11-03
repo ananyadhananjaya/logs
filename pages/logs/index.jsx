@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebase";
+import { db } from "../api/firebase";
 import Layout from "../../components/layout";
 
 export default function Logs({ data }) {

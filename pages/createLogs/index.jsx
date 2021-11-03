@@ -1,5 +1,5 @@
 import { useState } from "react";
-import createLog from "../../firebase/createLog";
+import createLog from "../api/createLog";
 import { useRouter } from "next/dist/client/router";
 import Layout from "../../components/layout";
 
