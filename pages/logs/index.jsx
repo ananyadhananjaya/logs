@@ -9,8 +9,8 @@ export default function Logs({ data }) {
         <div className="flex flex-wrap justify-center">
           {Object.keys(data).map(key => (
             <div className="max-w-sm rounded overflow-hidden shadow-md m-2 w-2/3 font-mono hover:shadow-lg hover:text-gray-600">
-              <div className="px-6 py-4">
-                <p key = {key}>{data[key].log}</p>
+              <div className="px-6 py-4" key={key}>
+                <p>{data[key].log}</p>
               </div>
             </div>
           ))}
