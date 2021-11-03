@@ -8,8 +8,8 @@ export default function Logs({ data }) {
       <div className="">
         <div className="flex flex-wrap justify-center">
           {Object.keys(data).map(key => (
-            <div className="max-w-sm rounded overflow-hidden shadow-md m-2 w-2/3 font-mono hover:shadow-lg hover:text-gray-600">
-              <div className="px-6 py-4" key={key}>
+            <div key={key} className="max-w-sm rounded overflow-hidden shadow-md m-2 w-2/3 font-mono hover:shadow-lg hover:text-gray-600">
+              <div className="px-6 py-4" >
                 <p>{data[key].log}</p>
               </div>
             </div>
@@ -21,7 +21,7 @@ export default function Logs({ data }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await getDocs(collection(db, "logs"));
   const data = {};
   await res.forEach((doc) => {
